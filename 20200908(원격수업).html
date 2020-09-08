@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    
+
+    <script>
+        $(document).ready(function(){
+            //문서가 준비되면 매개변수로 넣은 콜백 함수를 실행 하라는 뜻
+        })
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('h2').css('background','yellow')
+            $('p').css('color','blue')
+            
+        })
+    </script>
+    
+
+   
+
+</head>
+
+<body>
+
+  <h2>자바</h2>
+  <p>스크립트</p>
+  <h2>html</h2>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function(){
+                var n = $('select > option:selected').val();
+                alert(n);
+            },3000);
+        });
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <select>
+        <option>치킨</option>
+        <option>햄버거</option>
+        <option>제육볶음</option>
+    </select>
+
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var ary = [{name:'kim',link:'http://naver.com'},
+            {name:'lee',link:'http://daum.net'}
+            ];
+        
+        $.each(ary,function(index,item){ //배열관리
+            var n = '';
+            n+= '<a href = "'+item.link+'">'
+            n+='<h2>'+item.name+'<h2>';
+            n+="</a>";
+            document.body.innerHTML+=n;
+        });
+    });
+    </script>
+
+
+
+
+</head>
+
+<body>
+    
+
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <style>
+        .aa0{
+            background-color: aqua;
+        }
+        .aa1{
+            background-color: coral;
+        }
+        .aa2{
+            background-color: darkblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      
+       $(document).ready(function(){
+           $('h1').each(function(index,item){//each는 배열관리
+            $(item).addClass('aa'+index); //클래스 이름 aa
+           });
+
+       });
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <h1>치킨</h1>
+    <h1>피자</h1>
+    <h1>돈까스</h1>
+    <h1>보쌈</h1>
+
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <style>
+        .aa0{
+            background-color: aqua;
+        }
+        .aa1{
+            background-color: coral;
+        }
+        .aa2{
+            background-color: darkblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      
+       $(document).ready(function(){
+           $('h1').each(function(index,item){//each는 배열관리
+            $(item).addClass('aa'+index); //클래스 이름 aa
+           });
+
+       });
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <h1>치킨</h1>
+    <h1>피자</h1>
+    <h1>돈까스</h1>
+    <h1>보쌈</h1>
+
+
+</body>
+
+</html>
+
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <style>
+        .aa0{
+            background-color: aqua;
+        }
+        .aa1{
+            background-color: coral;
+        }
+        .aa2{
+            background-color: darkblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      
+       $(document).ready(function(){
+          var n = {name:'juli'};
+          $.extend(n,{
+              adr:'서울',
+              job:'it'
+          });
+       
+       var m='';
+       $.each(n,function(key,item){
+        m+=key + "" + item + '\n';
+       });
+       alert(m);
+    });
+    </script>
+
+
+
+
+</head>
+
+<body>
+    
+
+
+</body>
+
+</html>
