@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<!--
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            var today = new Date();
+            var a = today.getDate();
+            document.write(a);
+            document.write("<br>");
+            if (today.getDay() == 1 || today.getDay() == 2 || today.getDay() == 3) {
+                document.body.style.backgroundColor = 'green';
+
+            } else {
+                document.body.style.backgroundColor = 'blue';
+
+            }
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function wheel(e, obj) {
+            if (e.wheelDelta < 0) {
+                obj.style.width -= obj.style.width * 0.1;
+                obj.style.height -= obj.style.height * 0.1;
+            }
+            else {
+                obj.style.width += obj.style.width * 0.1;
+                obj.style.height += obj.style.height * 0.1;
+
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <img src="aa.jpg" onwheel="wheel(event,this)"></span>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        var n = window.open('','','width=250, height=150');
+        n.moveTo(0,0);
+
+        setInterval(function(){
+            n.moveBy(10,10);
+
+        },1000);
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   
+
+</head>
+
+<body>
+    <p id="p"> 다음 여기서
+
+        <strong id="st"> 이벤트 </strong> 를 출력해라. </p>
+        <script>
+            var n = document.getElementById("p");
+            n.addEventListener("click",function(e){alert(this.tagName+" "+ e.target.innerHTML)});
+        </script>
+</body>
+
+</html>
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   
+
+</head>
+
+<body>
+    <h1 id="head">Click</h1>
+    <script>
+        window.onload = function (){
+            var n = document.getElementById("head");
+            n.addEventListener("click",function(e){this.style.color="orange";this.style.backgroundColor="coral"})
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+    <label> 5 * 3</label> <input class="aa" type="text"><br>
+    <label> 1+2*3</label> <input class="aa" type="text"><br>
+    <label> 12*2</label> <input class="aa" type="text"><br>
+    <input onclick="cl()" type="button" value="결과">
+    <script>
+        function cl() {
+            var c = 0;
+            var v = document.getElementsByClassName("aa");
+            var p = document.getElementsByTagName("label");
+            for (var i = 0; i < v.length; i++) {
+                if (eval(p[i].innerHTML) == parseInt(v[i].value)) {
+                    c++;
+                }
+                else if (eval(p[i].innerHTML) != parseInt(v[i].value)) {
+                    p[i].style = 'text-decoration: line-through';
+
+                }
+
+            }
+            document.body.innerHTML += c;//공백일때?!
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+    <form id="mm">
+
+        비번 <input type="password" name="pa" id="p"><br />
+
+        비번확인 <input type="password" name="pa-ch" id="pa"><br />
+
+        <input type="submit" value="제출" />
+
+    </form>
+    <script>
+        window.onload = function () {
+
+            document.getElementById('mm').onsubmit = function () {
+
+                var n = document.getElementById('p').value;
+
+                var m = document.getElementById('pa').value;
+
+                if (n == m) {
+
+                    alert("성공");
+
+                } else {
+
+                    alert("다시 입력");
+
+                    return false;
+
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+
+<body >
+    <p>안녕 나는 학생이다.</p>
+    <script>
+       window.onload = function(){
+        var t = document.createTextNode("sd");
+       }
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h2').filter(':even').css({
+                backgroundColor:'black',
+                color:'yellow'
+            })
+        })
+    </script>
+
+
+</head>
+
+<body >
+    <h2>준호</h2>
+    <h2>야오</h2>
+    <h2>미냐</h2>
+    <script>
+       
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h2').eq(0).css('background','orange').add('h2').css('float','left');
+            $('h2').each(function(){
+                if($(this).is('.aa')){
+                    $(this).css('background','blue');
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body >
+    <h2 class="aa">준호</h2>
+    <h2>야오</h2>
+    <h2 class="aa">미냐</h2>
+    <script>
+       
+    </script>
+</body>
+
+</html>
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').addClass('class');
+            $('h1').removeClass('class');
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>자바</h1>
+    <h1>스크립트</h1>
+    <h1 class="jj">재밌다</h1>
+    <script>
+       
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       
+    </script>
+
+</head>
+
+<body>
+    <select onchange="on(selectedIndex)">
+        <option value="http://www.naver.com">네이버</option>
+        <option value="http:/www.google.com">구글</option>
+    </select>
+
+    <script>
+        function on(e){
+             var n = document.getElementsByTagName("option");
+             window.open(n[e].value)
+            
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+
+    <p id="t"></p>
+    <script>
+        setInterval(function () {
+            var v = new Date()
+            var time1 = v.getHours() + "시 " + v.getMinutes() + "분 " + v.getSeconds() + "초";
+            document.getElementById("t").innerHTML = time1;
+        }, 1000)
+    </script>
+</body>
+
+</html>
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+
+    <p id="aa"></p>
+    <script>
+        setInterval(function(){
+        var n = new Date();
+        var m = document.getElementById("aa");
+        var time1 = n.getHours()+"시"+n.getMinutes()+"분"+n.getSeconds()+"초";
+        m.innerHTML = time1;
+        if(n.getHours()==17 && n.getMinutes==23 && n.getSeconds()==10){
+            clearInterval(m);
+        }
+        },1000);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $('img').attr('width',function(index){
+                return (index+1)*200;
+             });
+           
+        })
+    </script>
+
+</head>
+
+<body>
+    <img src="aa.jpg">
+    <img src="초콜릿사진.jpg">
+    
+    <script>
+        
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $('img').attr('width',function(index){
+                return (index+1)*200;
+             });
+           
+        })
+    </script>
+
+</head>
+
+<body>
+    <img src="aa.jpg">
+    <img src="초콜릿사진.jpg">
+    
+    <script>
+        
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var n=['red','orange','yellow'];
+       $(document).ready(function(){
+
+       
+       $('h2').css('color',function(index){
+           return n[index];
+       })
+    })
+    </script>
+
+</head>
+
+<body>
+    <h2>경찬</h2>
+    <h2>지혜</h2>
+    <h2>동혁</h2>
+    
+    <script>
+        
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var n = ['red', 'orange', 'yellow'];
+        $(document).ready(function () {
+            $('h2').css({
+                color:function(index){
+                    return n[index];
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <h2>경찬</h2>
+    <h2>지혜</h2>
+    <h2>동혁</h2>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+-->
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var n = new Array
+        n[0] = "김동혁";
+        n[1] = "족발";
+        document.write(n[0]+"<br>"+n[1]);
+
+        var s = [];
+        s.push({
+            name:'tom',
+            
+        })
+
+    </script>
+
+</head>
+
+<body>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
