@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<!--
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       var stu ={
+           name:'수정',
+           grade:'1학년',
+           toString:function(){
+               return this.name + " : " + this.grade;
+           }
+       };
+       alert(stu);
+
+    </script>
+
+</head>
+
+<body>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var n;
+       function ch1(){
+           n = document.getElementById("aa");
+           n.style.textDecoration="underline"
+       }
+       function ch2(){
+           n = document.getElementById("aa");
+           n.style.textDecoration="none";
+       }
+
+    </script>
+
+</head>
+
+<body>
+    <p onmouseover="ch1()" onmouseout="ch2()" id="aa">안전한 대한민국 파이팅</p>
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var n = window.open("","","width=300, height=200");
+        var x = screen.width; //1200*1350(해상도)
+        var y = screen.height;
+
+        n.moveTo(0,0)//윈도우 위치 절대적 이동    
+        n.resizeTo(x,y);//윈도우 크기를 절대적으로 지정
+
+        setInterval(function(){
+            n.resizeBy(-10,-10);//윈도우 크기 상대적 지정
+            n.moveBy(20,20);//윈도우위치 상대적 이동
+
+        },1000);
+    </script>
+
+</head>
+
+<body>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+        var a = document.getElementById("my");
+        var n = document.createElement("span");
+        var m = document.createTextNode("hi");
+        n.appendChild(m);
+        a.appendChild(n);
+        
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="my"></div>
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var n = { 이름: '경찬' };
+            $.extend(n, {
+                주소: '서울',
+                아이디: 'asd'
+            });
+            var m = '';
+            $.each(n, function (key, item) {
+                m += key + " " + item + '\n';
+            });
+            document.write(m);
+        })
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       function ch(e){
+           var n = document.getElementById("a");
+           var x = e.screenX;
+           var y = e.screenY;
+           n.innerHTML = x+" " +y
+
+       }
+    </script>
+
+</head>
+
+<body>
+    <img src="aa.jpg" id="aa" onmousemove="ch(event)">
+    <p id="a"></p>
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('div').html('hi');
+       });
+    </script>
+
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('h1').html(function(index,n){
+               return n;
+           });
+       });
+    </script>
+
+</head>
+
+<body>
+    <h1>자바</h1>
+    <h1>스크립트</h1>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('h1').first().remove();
+           
+       });
+    </script>
+
+</head>
+
+<body>
+    <h1>자바</h1>
+    <h1>스크립트</h1>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('h1').empty();//h1 태그 다 제거
+           
+       });
+    </script>
+
+</head>
+
+<body>
+    <h1>자바</h1>
+    <h1>스크립트</h1>
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('<h1></h1>').html('hi').appendTo('body');
+           //$() 매개변수에 html태그를 문자열로 넣기만 하면 문서객체가 생성된다.
+           //문자열h1삽입 body부분에 추가!
+           //설명: h1을 생성 해서 거기에 hi를 넣고 body에 부착!
+       });
+    </script>
+
+</head>
+
+<body>
+    
+    
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('<img />', {
+                src: "aa.jpg",
+                width: "500",
+                height: "500"
+            }).appendTo('body');
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var n = '<h1>head1</h1>';
+            var m = '<h2>head2</h2>';
+            $('body').append(n,m);
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var n = [{ name: 'kim', id: '123' },
+            { name: 'lee', id: '352' },
+            { name: 'park', id: '412' },
+
+            ];
+            //문서객체 추가
+            $('div').append(function (index) {
+                var a = n[index];
+                var b = '';
+                b += a.id + " " + a.name;
+                return b;
+
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('img').first().appendTo('body');//첫번째 사진을 body 뒤에 덧붙인다
+           //문서객체이동
+
+       })
+    </script>
+
+</head>
+
+<body>
+    <img src="aa.jpg">
+    <img src="초콜릿사진.jpg">
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('img').css('height',200);
+           setInterval(function(){
+            $('img').first().appendTo('body');
+           },3000);
+        
+       })
+    </script>
+
+</head>
+
+<body>
+    <img src="aa.jpg">
+    <img src="초콜릿사진.jpg">
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('h1').appendTo('div');
+
+      })
+    </script>
+
+</head>
+
+<body>
+    <h1>효준</h1>
+    <div></div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('h1').append($('div').clone()); //문서 복제 ,여기서는 $('div').clone() 태그네임아니다!
+
+      })
+    </script>
+
+</head>
+
+<body>
+    <h1>효준</h1>
+    <div></div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('h1').filter(':even').css({
+                
+                color:'blue'
+            });
+        $('h1').filter(':odd').css({
+                
+                color:'violet'
+            })
+      })
+    </script>
+
+</head>
+
+<body>
+    <h1>효준</h1>
+    <h1>길동</h1>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+       $('h1').on('click',function(){ 
+         $(this).html(function(index,html){
+             return html +"★";
+         })
+       })
+      })
+    </script>
+
+</head>
+
+<body>
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        .aa{
+            color: aqua;
+            background-color: green;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('h1').on({
+                mouseover: function () {
+                    $(this).addClass('aa');
+
+                },
+                mouseover: function () {
+                    $(this).removeClass('aa');
+                }
+
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('h1').on("click",function(){
+               $(this).html('클릭');
+               alert('이벤트발생!');
+              
+               $(this).off();//이벤트제거
+               
+            })
+           
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>오오</h1>
+    <h1>호호</h1>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        div{
+            margin: 80px;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div').click(function(){
+                var a = $('h1',this).text();//context객체
+                var b = $('p',this).text();
+
+                alert(a+" "+b);
+            })
+           
+        })
+    </script>
+
+</head>
+
+<body>
+    <div>
+       <h1>one</h1> 
+       <p>일</p>
+    </div>
+    
+    <div>
+        <h1>two</h1> 
+        <p>이</p>
+     </div>
+     <div>
+        <h1>three</h1> 
+        <p>삼</p>
+     </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        div{
+            margin: 80px;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           $('h1').click(function(){
+               $(this).html(function(index,n){
+                   return n + "*";
+               });
+            });
+               setInterval(function(){
+
+               $('h1').last().trigger('click');
+           },2000);       
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>jquery</h1>
+    <h1>jsp</h1>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           $('h1').click(function(event,n1,n2){
+                alert(n1+ ":" + n2);
+                $('h1').first().trigger('click',[3,4]);
+            });
+                 
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>jquery</h1>
+    <h1>jsp</h1>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           $('a').click(function(e){
+                $(this).css('backgroundColor','green');
+                //e.preventDefault();
+                e.stopPropagation();
+                e.preventDefault();
+           })
+                 
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        <a href="http://www.naver.com">네이버</a>
+    </h1>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           $('h1').on('click',function(){
+               var n =$(this).html();
+               $('#aa').append(n);
+           })
+                 
+        })
+    </script>
+
+</head>
+
+<body>
+   <div id="aa">
+       <h1>head</h1>
+   </div>
+   
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#aa").on("click", 'h1', function () {
+                var n = $(this).html();
+                $('#aa').append(n);
+            })
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <div id="aa">
+        <h1>head</h1>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('textarea').keyup(function(){
+                var n = $(this).val().length;
+                var m =n;
+                $('h2').html(m);
+                if(n<10){
+                    $('h2').css('color','pink');
+                }
+                else{
+                    $('h2').css('color','blue');
+                }
+                
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <p>안녕하세요</p>
+        <h2>여러분</h2>
+        <textarea cols="50" rows="5"></textarea>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+-->
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#pro').submit(function(e){
+               var n = $("#name").val();
+               alert(n);
+           })
+        })
+    </script>
+
+</head>
+
+<body>
+    <form id="pro">이름:<input type="text" id="name"><br>
+    비번:<input type="password" id="pass"><br>
+    <input type="submit" value="제출"></form>
+    
+
+    <script>
+
+    </script>
+</body>
+
+</html>
