@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#pro').submit(function(e){
+               var n = $("#name").val();
+               alert(n);
+           })
+        })
+    </script>
+
+</head>
+
+<body>
+    <form id="pro">이름:<input type="text" id="name"><br>
+    비번:<input type="password" id="pass"><br>
+    <input type="submit" value="제출"></form>
+    
+
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+<html lang="kr">
+
+<head>
+    <style>
+        .out{
+            width :100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .in{
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.out').mouseover(function(){
+                $('body').append('<h1>mousever</h1>');
+            }).mouseout(function(){
+                $('body').append('<h1>mouseout</h1>');
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="out">
+        <div class="in"></div>
+    </div>    
+
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //span 태그의 부모의 백그라운드를 핑크색으로
+            $('span').parent().css('background','pink');
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div>
+       <span>비활성</span>
+       <button>활성</button>
+    </div>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function(){
+                $(this).text('안녕');
+                //자신의 부모의 색을 green 색으로 바꾼다
+                $(this).parent().css('color','green');
+                $(this).parent().find('span').text('hi');
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div>
+       <span>비활성</span>
+       <button>활성</button>
+    </div>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function(){
+                $('.di').toggle('slow');//보였다 사라졌다 개신기하네
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <button>보이기</button>
+    <div class="di">
+        <h1>제목</h1>
+        <p>자바 스크립트 제이쿼리</p>
+    </div>
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+        #aa{
+            width: 500px;
+            height: 30px;
+            border: 2px solid black;
+        }
+        #cc{
+            width: 500px;
+            height: 30px;
+            border: 2px solid black;
+        }
+        #bb{
+            background-color: coral;
+            color: white;
+            width: 100px;
+            height: 50px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('#bb').click(function(){
+            if($('#aa').val()== "자바" && $('#cc').val()== "1234" ){
+                alert("로그인성공");
+            }
+            else{
+                alert("실패")
+            }
+           })
+           $('#bb').hover(function(){
+               $('#bb').css('background','blue');
+               $('#bb').css('cursor','pointer');
+           })
+        }); 
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>로그인</h1>
+    <h2>아이디</h2>
+    <input type="text" id="aa" placeholder="아이디를 입력하세요">
+    <h2>패스워드</h2>
+    <input type="text" id="cc" placeholder="비밀번호입력하세요"><br>
+    <input type="button" value="로그인" id="bb">
+    
+</body>
+
+</html>
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <button onclick="history.back()">이전 웹페이지</button>
+    <button onclick="history.go(-2)">이이전 웹페이지</button>
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       var n = ["aa.jpg","초콜릿사진.jpg","아이언맨.jfif"];
+       var im = new Array();
+       for(var i =0; i<n.length; i++){
+           im[i] = new Image();//이미지 객체 생성
+           im[i].src=n[i];//이미지 로딩 지시
+       }
+       var i=1;
+       function ch(img){
+        img.src=im[i].src; //이미지 변경해라
+        i++;
+        i%=im.length; //i =i%im.length
+       }
+
+
+    </script>
+
+</head>
+
+<body>
+    <img src="아이언맨.jfif" width="200" height="150" onclick="ch(this)">
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      alert(Array.isArray([1,2,3])); //배열인지 확인하는 함수
+
+
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //반복메소드(forEach,map)
+      var ary =[1,2,3,4,5];
+      var sum=0;
+      var n='';
+
+      ary.forEach(function(element,index,ary){
+          sum+=element;
+          n+=index + " : " + element + " : " +sum+ '\n';
+      })
+      alert(n);
+      
+
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //반복메소드(forEach,map)
+      var ary =[1,2,3,4,5];
+      var n = ary.map(function(element){
+          return element;
+      })
+      alert(n);
+
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
+
+
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+     //조건 메소드
+     //1.filter 2.every 3.some
+        var ary =[1,2,3,4,5];
+        ary = ary.filter(function(element,index,ary){
+            return element<=3;
+        })
+        alert(ary);
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
+
+-->
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+     //조건 메소드
+     //1.filter 2.every 3.some
+        var ary =[1,2,3,4,5];
+        function mini(element,index,ary){
+            return element<3;
+        }
+        function maxi(element,index,ary){
+            return element>=3;
+        }
+        var a = ary.every(mini);
+        var b = ary.every(maxi);
+        var c = ary.some(mini);
+        var d = ary.some(maxi);
+
+        var n ='';
+        n+= a+ '    ' + b + '       '+ c + '        '+ d
+        alert(n);
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
