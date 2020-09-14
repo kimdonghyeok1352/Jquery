@@ -1,0 +1,66 @@
+<!--
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("<h2></h2>").html("김동혁").appendTo("body");
+        
+      })
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>
+-->
+
+<html lang="kr">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            var n1 = document.getElementById("a");
+            var n2 = document.getElementById("b");
+            var n3 = document.getElementById("c");
+            var n4 = document.getElementById("d");
+
+            n1.onclick = function () {
+                n3.innerHTML=Number(n3.innerHTML)+1;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="button" id="a" value="A">
+    <input type="button" id="b" value="B">
+    <h2>A: <span id="c">0</span></h2>
+    <h2>B: <span id="d">0</span></h2>
+</body>
+
+</html>
