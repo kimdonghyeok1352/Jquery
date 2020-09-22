@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var visual=null,cnt;
+            function on(){
+                document.getElementById("grade").innerHTML=0;
+                var time=document.getElementById("time");
+                cnt=10;
+                if(visual!=null)
+                    clearTimeout(visual);
+                    outtime(time);
+     
+            }
+            function outtime(c){
+                cnt--;
+                c.innerHTML=cnt;
+                if(cnt!=0)
+                    visual=setTimeout("outtime(time)",1000);
+                else
+                    result();
+            }
+            function se(){
+                var a = document.getElementsByClassName("aa");
+                var b = document.getElementsByClassName("bb");
+
+                for(var i=0; i<a.length;i++){
+                    var n1=Math.floor(Math.random()*9);
+                    var n2=Math.floor(Math.random()*9);
+                    var op=Math.floor(Math.random()*4);
+                    var oper;
+
+                    switch(op){
+                        case 0:
+                            oper="+";
+                            break;
+                        case 1:    
+                            oper="-";
+                            break;
+                        case 2:    
+                            oper="*";
+                            break;                            
+                        case 3:    
+                            oper="/";
+                            break;
+                    }   
+                    a[i].innerHTML=n1+oper+n2;
+                }
+            }
+            function result(){
+                var score=0;
+                var a=document.getElementsByClassName("aa");
+                var b=document.getElementsByClassName("bb");
+                for(i=0; i<a.length; i++){
+                    var q=a[i].innerHTML;
+                    var r=b[i].value;//내가쓴답
+                    var n=Math.floor(eval(q));//진짜 답
+                    if(parseInt(r)==n){
+                        score++;
+                    }
+                    else if(r==""){
+                        a[i].style.textDecoration="line-throught";
+                    }
+                }
+                document.getElementById("grade").innerHTML = score;
+            }
+        </script>
+    </head>
+    <body onload="on(),se()">
+        <div>남아있는 시간<span id="time">0</span></div>
+        <form>
+            <table>
+                <tr>
+                    <td class="aa"></td>
+                    <td> <input class="bb" type="text";></td>
+                </tr>
+                <tr>
+                    <td class="aa"></td>
+                    <td><input class="bb" type="text";></td>
+                </tr>
+                <tr>
+                    <td class="aa"></td>
+                    <td><input class="bb" type="text";></td>
+                </tr>
+                <tr>
+                    <td class="aa"></td>
+                    <td><input class="bb" type="text";></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="on(),se()">다시</button></td>
+                    <td><span id="grade">0</span></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
